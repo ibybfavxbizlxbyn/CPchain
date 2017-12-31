@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1514729194 source:c:\users\kolia\desktop\cpchain\sha256.cpp
+	"sha256.h"
+
+1514729194 c:\users\kolia\desktop\cpchain\sha256.h
+	"cpchain.h"
+
+1514732798 c:\users\kolia\desktop\cpchain\cpchain.h
+	<string>
+	<cstring>
+	<fstream>
+	<iostream>
+	<cstdlib>
+
+1514729559 source:c:\users\kolia\desktop\cpchain\main.cpp
+	"block.h"
+
+1514732798 c:\users\kolia\desktop\cpchain\block.h
+	"sha256.h"
+
