@@ -18,3 +18,22 @@
 1514732798 c:\users\kolia\desktop\cpchain\block.h
 	"sha256.h"
 
+1514729194 source:c:\users\kolia\desktop\cpchain\cpchain\sha256.cpp
+	"sha256.h"
+
+1514729194 c:\users\kolia\desktop\cpchain\cpchain\sha256.h
+	"cpchain.h"
+
+1514744933 c:\users\kolia\desktop\cpchain\cpchain\cpchain.h
+	<string>
+	<cstring>
+	<fstream>
+	<iostream>
+	<cstdlib>
+
+1514744902 source:c:\users\kolia\desktop\cpchain\cpchain\main.cpp
+	"block.h"
+
+1514744992 c:\users\kolia\desktop\cpchain\cpchain\block.h
+	"sha256.h"
+

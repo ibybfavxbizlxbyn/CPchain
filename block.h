@@ -18,7 +18,7 @@ private:
     */
     string data;      // Data in the block
     string _hash;     // Block`s hash
-    string prev_hash; // Previous block`s hash
+    string prev_hash; // Previous block`s has  h
 
     /*
         Hash calculation function
@@ -69,13 +69,15 @@ private:
         fout << index << " " << time[0] << " " << time[1] << " " << time[2] << " " << time[3] << " "
         << time[4] << " " <<  time[5] << " " << data << " " << _hash << " " << prev_hash << endl;
         fout.close();
+        fout.open("info.txt", fstream::app);
+        fout << endl << _hash;
     }
 
 public:
     /*
         Constructor
     */
-    Block(long long index, string data, string prev_hash)
+    Block(long long index, string data, string prev_hash = "0")
     {
         this->index = index;
         this->getTime();

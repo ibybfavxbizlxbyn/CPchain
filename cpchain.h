@@ -1,12 +1,18 @@
 #ifndef CPCHAIN_H_INCLUDED
 #define CPCHAIN_H_INCLUDED
 
+/*
+    Libraries
+*/
 #include <string>
 #include <cstring>
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
 
+/*
+    Somebody know what is it?
+*/
 using std::cin;
 using std::cout;
 using std::endl;
