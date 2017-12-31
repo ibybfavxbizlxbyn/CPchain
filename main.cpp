@@ -3,7 +3,7 @@
 long long _quantity = 0; // quantity of blocks in chain
 
 void createBlock(string);       //Function that creates a new block in a chain
-//void printBlock(long long);     //Function that shows information about some block: time, data and hash
+void printBlock(long long);     //Function that shows information about some block: time, data and hash
 
 int main()
 {
@@ -19,9 +19,10 @@ int main()
 
     while(true)
     {
-        cout << "\t\t CPchain \n\n" << endl;
+        cout << "\t\t CPchain \t" << _quantity << " blocks in the chain." << "\n\n";
         cout << "1.Show block" << endl;
         cout << "2.Add new block" << endl;
+        cout << "\t" << endl;
 
         long long answear;
         cin >> answear;
@@ -30,10 +31,11 @@ int main()
             cout << "Enter number of a block: ";
             cin >> answear;
 
-            if (answear > _quantity-1)
+            if (answear > _quantity)
                 cout << "Error: No such block in chain" << endl;
-            //else
-                //printBlock(answear);
+            else
+                printBlock(answear);
+            _getch();
         } else
         if (answear == 2)   //Create new block
         {
@@ -41,6 +43,8 @@ int main()
             string data;
             cin >> data;
             createBlock(data);
+            cout << "A new block was created" << endl;
+            _getch();
         }
         system("cls");
     }
@@ -65,10 +69,12 @@ void createBlock(string data)
 
 /*
     Function that shows information about some block: time, data and hash
-*//*
+*/
 void printBlock(long long index)
 {
-    int info[10];
+    ifstream fin;
+    fin.open("blockchain.txt");
+    string info[10];
     for (int i = 0; i < index; i++)
     {
         for (int j = 0; j < 10; j++)
@@ -76,7 +82,9 @@ void printBlock(long long index)
             fin >> info[j];
         }
     }
-    cout << "Block #" << info[0] << endl
-    << "Time when block was created: " << info[1] << ":" << info[2] << ":" << info[3] << " " << info[4] << "." << info[5] << "." << info[6] << endl
-    << ""
-}*/
+    cout << "Block " << info[0] << endl
+    << "Time: " << info[1] << ":" << info[2] << ":" << info[3] << " " << info[4] << "." << info[5] << "." << info[6] << endl
+    << "Data: " << info[7] << endl
+    << "Hash: " << info[8] << endl
+    << "Previous Hash: " << info[9] << endl;
+}

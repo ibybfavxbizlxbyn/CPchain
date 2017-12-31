@@ -9,6 +9,7 @@
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
+#include <conio.h>
 
 /*
     Somebody know what is it?
